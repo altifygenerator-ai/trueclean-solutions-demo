@@ -56,8 +56,8 @@ export const services = [
 
 export const beforeAfter = [
   {
-    title: "Spiderweb Removal",
-    text: "Webs and buildup removed from exterior surfaces.",
+    title: "Commercial Building Washing",
+    text: "Whether its residential or commercial we cover it all.",
     before: "/images/trueclean-before1.jpg",
     after: "/images/trueclean-after1.jpg",
   },
@@ -66,5 +66,37 @@ export const beforeAfter = [
     text: "Exterior surfaces cleaned for a fresher, better-kept look.",
     before: "/images/trueclean-before2.jpg",
     after: "/images/trueclean-after2.jpg",
+  },
+];
+export const faqs = [
+  {
+    question: "Do you offer free estimates?",
+    answer:
+      "Yes. You can call or text TrueClean Solutions and explain what needs cleaned. Photos are helpful when possible.",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "TrueClean Solutions is based in Lyons, Georgia and serves Lyons, Vidalia, Toombs County, and surrounding South Georgia areas.",
+  },
+  {
+    question: "What cleaning services do you offer?",
+    answer:
+      "Services include soft washing, house washing, spiderweb removal, storefront cleaning, concrete cleaning, walkways, and commercial exterior cleaning.",
+  },
+  {
+    question: "Do you clean both homes and businesses?",
+    answer:
+      "Yes. TrueClean Solutions provides residential and commercial exterior cleaning for homes, storefronts, offices, shops, and other local properties.",
+  },
+  {
+    question: "What is soft washing?",
+    answer:
+      "Soft washing is a lower-pressure cleaning method used for surfaces that need a careful clean, such as siding, trim, storefronts, and some exterior areas.",
+  },
+  {
+    question: "Can I send photos before getting a quote?",
+    answer:
+      "Yes. Sending photos of the area that needs cleaned is one of the easiest ways to get the quote process started.",
   },
 ];

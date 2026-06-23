@@ -16,6 +16,11 @@ export default function Hero() {
 
       <div className="hero-overlay" />
       <div className="hero-glow" />
+      <div className="liquid-layer" aria-hidden="true">
+  <span className="liquid-blob liquid-blob-one" />
+  <span className="liquid-blob liquid-blob-two" />
+  <span className="liquid-blob liquid-blob-three" />
+</div>
 
       <div className="container hero-grid">
         <div className="hero-content">
