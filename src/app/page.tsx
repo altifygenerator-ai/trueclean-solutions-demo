@@ -9,7 +9,8 @@ import ResidentialCommercial from "@/components/ResidentialCommercial";
 import ServiceArea from "@/components/ServiceArea";
 import Services from "@/components/Services";
 import { services, site } from "@/data/site";
-
+import IntroLogo from "@/components/IntroLogo";
+import GalleryPreview from "@/components/GalleryPreview";
 const siteUrl = "https://truecleansolutionsga.com";
 
 export default function Home() {
@@ -67,11 +68,13 @@ export default function Home() {
       />
 
       <main>
+        <IntroLogo />
         <Header />
         <Hero />
         <Services />
-        <BeforeAfter />
-        <ResidentialCommercial />
+      <BeforeAfter />
+<GalleryPreview />
+<ResidentialCommercial />
         <About />
         <FAQ />
         <ServiceArea />

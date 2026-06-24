@@ -2,7 +2,7 @@ import { services } from "@/data/site";
 
 export default function Services() {
   return (
-    <section id="services" className="section services-section">
+    <section id="services" className="section services-section water-bg water-bg-right">
       <div className="container">
         <div className="section-heading">
           <p className="section-kicker">What We Clean</p>

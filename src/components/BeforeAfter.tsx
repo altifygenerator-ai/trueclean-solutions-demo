@@ -3,7 +3,10 @@ import { beforeAfter } from "@/data/site";
 
 export default function BeforeAfter() {
   return (
-    <section id="before-after" className="section before-after-section">
+    <section
+  id="before-after"
+  className="section before-after-section water-bg water-bg-left"
+>
       <div className="container">
         <div className="split-heading">
           <div>

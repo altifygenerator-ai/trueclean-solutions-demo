@@ -5,25 +5,27 @@ export const site = {
   phoneHref: "tel:9122456075",
   tagline: "A Better Cleaning Solution",
   description:
-    "TrueClean Solutions provides soft washing, house washing, spiderweb removal, storefront cleaning, concrete cleaning, and exterior cleaning services for homes and businesses across South Georgia.",
+    "TrueClean Solutions provides soft washing, house washing, spiderweb removal, sidewalk and concrete cleaning, equipment cleaning, storefront cleaning, commercial washing, and exterior cleaning services across South Georgia.",
   serviceArea:
     "Serving Lyons, Vidalia, Toombs County, and surrounding South Georgia areas.",
   nav: [
-    { label: "Services", href: "#services" },
-    { label: "Before & After", href: "#before-after" },
-    { label: "About", href: "#about" },
-    { label: "Quote", href: "#quote" },
-  ],
+  { label: "Services", href: "/#services" },
+  { label: "Before & After", href: "/#before-after" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "About", href: "/#about" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Quote", href: "/#quote" },
+],
 };
 
 export const trustItems = [
   "Soft Washing",
   "House Washing",
   "Spiderweb Removal",
-  "Storefront Cleaning",
+  "Sidewalk Cleaning",
   "Concrete Cleaning",
-  "Residential Cleaning",
-  "Commercial Cleaning",
+  "Equipment Cleaning",
+  "Commercial Washing",
   "South Georgia Service",
 ];
 
@@ -41,33 +43,48 @@ export const services = [
     text: "Removal of spiderwebs, buildup, and hard-to-reach mess around homes, storefronts, porches, and exterior surfaces.",
   },
   {
-    title: "Storefront Cleaning",
-    text: "Cleaning for business fronts, entryways, sidewalks, and customer-facing exterior areas.",
+    title: "Sidewalk & Concrete Cleaning",
+    text: "Surface cleaning for sidewalks, walkways, driveways, pads, and high-traffic concrete areas.",
   },
   {
-    title: "Concrete & Walkways",
-    text: "Cleaning for sidewalks, walkways, driveways, pads, and high-traffic concrete areas.",
+    title: "Equipment Cleaning",
+    text: "Cleaning for logging equipment, construction equipment, heavy machinery, trailers, and other work equipment.",
   },
   {
-    title: "Commercial Cleaning",
-    text: "Exterior cleaning for local businesses, shops, gas stations, offices, and commercial properties.",
+    title: "Commercial Washing",
+    text: "Exterior cleaning for local businesses, shops, gas stations, offices, storefronts, sidewalks, and commercial properties.",
   },
 ];
 
 export const beforeAfter = [
   {
     title: "Commercial Building Washing",
-    text: "Whether its residential or commercial we cover it all.",
+    text: "Commercial exterior surfaces cleaned to improve curb appeal and make the property look better cared for.",
     before: "/images/trueclean-before1.jpg",
     after: "/images/trueclean-after1.jpg",
   },
+    {
+    title: "Equipment Cleaning",
+    text: "Heavy equipment areas cleaned to remove grime, buildup, and jobsite mess from hard-working machinery.",
+    before: "/images/equipment-dirty-pump.jpg",
+    after: "/images/equipment-clean-pump2.jpg",
+  },
+
   {
-    title: "House Washing",
-    text: "Exterior surfaces cleaned for a fresher, better-kept look.",
+    title: "Spiderweb Removal",
+    text: "Spiderwebs and exterior buildup removed from the home for a cleaner, brighter look.",
+    before: "/images/house-before.jpg",
+    after: "/images/house-after.jpg",
+  },
+  {
+    title: "Sidewalk & Concrete Cleaning",
+    text: "Sidewalks and concrete surfaces cleaned to remove buildup and brighten up the property.",
     before: "/images/trueclean-before2.jpg",
     after: "/images/trueclean-after2.jpg",
   },
+
 ];
+
 export const faqs = [
   {
     question: "Do you offer free estimates?",
@@ -82,12 +99,17 @@ export const faqs = [
   {
     question: "What cleaning services do you offer?",
     answer:
-      "Services include soft washing, house washing, spiderweb removal, storefront cleaning, concrete cleaning, walkways, and commercial exterior cleaning.",
+      "Services include soft washing, house washing, spiderweb removal, sidewalk and concrete cleaning, equipment cleaning, storefront cleaning, commercial washing, and exterior cleaning.",
   },
   {
     question: "Do you clean both homes and businesses?",
     answer:
-      "Yes. TrueClean Solutions provides residential and commercial exterior cleaning for homes, storefronts, offices, shops, and other local properties.",
+      "Yes. TrueClean Solutions provides residential and commercial exterior cleaning for homes, storefronts, offices, shops, gas stations, sidewalks, concrete areas, and other local properties.",
+  },
+  {
+    question: "Do you clean heavy equipment?",
+    answer:
+      "Yes. TrueClean Solutions offers cleaning for logging equipment, construction equipment, heavy machinery, trailers, and other work equipment.",
   },
   {
     question: "What is soft washing?",
@@ -98,5 +120,97 @@ export const faqs = [
     question: "Can I send photos before getting a quote?",
     answer:
       "Yes. Sending photos of the area that needs cleaned is one of the easiest ways to get the quote process started.",
+  },
+];
+export const galleryItems = [
+  {
+    type: "image",
+    title: "Spiderweb Removal",
+    category: "Residential",
+    src: "/images/house-before.jpg",
+    alt: "Spiderweb buildup before exterior cleaning",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Spiderweb Removal After",
+    category: "Residential",
+    src: "/images/house-after.jpg",
+    alt: "Spiderwebs removed from home exterior",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Commercial Building Washing",
+    category: "Commercial",
+    src: "/images/trueclean-before1.jpg",
+    alt: "Commercial building before exterior cleaning",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Commercial Building After",
+    category: "Commercial",
+    src: "/images/trueclean-after1.jpg",
+    alt: "Commercial building after exterior cleaning",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Sidewalk Cleaning",
+    category: "Concrete",
+    src: "/images/trueclean-before2.jpg",
+    alt: "Sidewalk before concrete cleaning",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Sidewalk Cleaning After",
+    category: "Concrete",
+    src: "/images/trueclean-after2.jpg",
+    alt: "Sidewalk after concrete cleaning",
+    featured: true,
+  },
+  {
+    type: "image",
+    title: "Equipment Cleaning",
+    category: "Equipment",
+    src: "/images/equipment-cleaning-1.jpg",
+    alt: "Heavy equipment cleaning by TrueClean Solutions",
+    featured: false,
+  },
+  {
+    type: "image",
+    title: "Equipment Wash Down",
+    category: "Equipment",
+    src: "/images/equipment-cleaning-2.jpg",
+    alt: "Work equipment being cleaned",
+    featured: false,
+  },
+  {
+    type: "image",
+    title: "Surface Cleaning",
+    category: "Concrete",
+    src: "/images/surface-cleaning-1.jpg",
+    alt: "Concrete surface cleaning work",
+    featured: false,
+  },
+  {
+    type: "video",
+    title: "Residential Pressure Washing",
+    category: "Video",
+    src: "/videos/residential-pressure-washing.mp4",
+    poster: "/images/video-thumb-concrete.jpg",
+    alt: "Concrete cleaning video",
+    featured: true,
+  },
+  {
+    type: "video",
+    title: "Equipment Cleaning Video",
+    category: "Video",
+    src: "/videos/equipment-cleaning-1.mp4",
+    poster: "/images/video-thumb-equipment.jpg",
+    alt: "Equipment cleaning video",
+    featured: false,
   },
 ];

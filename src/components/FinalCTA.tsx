@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export default function FinalCTA() {
   return (
-    <section id="quote" className="final-cta">
+    <section id="contact" className="final-cta water-bg water-bg-center">
       <div className="container final-cta-inner">
         <p className="section-kicker">Request a Quote</p>
         <h2>Need exterior cleaning?</h2>

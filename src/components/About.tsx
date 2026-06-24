@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="section about-section">
+    <section id="about" className="section about-section water-bg water-bg-right">
       <div className="container about-grid">
         <div className="about-image-wrap">
           <Image
-            src="/images/trueclean-crew.jpg"
+            src="/images/trueclean-crew2.jpg"
             alt="TrueClean Solutions local family owned cleaning business"
             fill
             className="about-image"

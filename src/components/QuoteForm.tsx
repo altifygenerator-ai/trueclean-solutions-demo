@@ -111,12 +111,12 @@ export default function QuoteForm() {
             <option value="" disabled>
               Choose a service
             </option>
-            <option>Soft Washing</option>
-            <option>House Washing</option>
-            <option>Spiderweb Removal</option>
-            <option>Storefront Cleaning</option>
-            <option>Concrete & Walkways</option>
-            <option>Commercial Cleaning</option>
+           <option>Soft Washing</option>
+<option>House Washing</option>
+<option>Spiderweb Removal</option>
+<option>Concrete & Surface Cleaning</option>
+<option>Equipment Cleaning</option>
+<option>Commercial Cleaning</option>
           </select>
         </div>
 
