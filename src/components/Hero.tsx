@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <Image
-        src="/images/trueclean-hero.jpg"
+        src="/images/trueclean-hero2.jpg"
         alt="TrueClean Solutions trailer and exterior cleaning equipment"
         fill
         priority
