@@ -4,8 +4,8 @@ export const site = {
   phone: "912-245-6075",
   phoneHref: "tel:9122456075",
   tagline: "A Better Cleaning Solution",
-  description:
-    "TrueClean Solutions provides soft washing, house washing, spiderweb removal, sidewalk and concrete cleaning, equipment cleaning, storefront cleaning, commercial washing, and exterior cleaning services across South Georgia.",
+ description:
+  "TrueClean Solutions provides exterior cleaning, pressure washing, property maintenance, minor repairs, move-out repairs, turnover services, equipment cleaning, and ongoing property care for homes, businesses, rentals, and managed properties across South Georgia.",
   serviceArea:
     "Serving Lyons, Vidalia, Toombs County, and surrounding South Georgia areas.",
   nav: [
@@ -19,40 +19,40 @@ export const site = {
 };
 
 export const trustItems = [
-  "Soft Washing",
-  "House Washing",
-  "Spiderweb Removal",
-  "Sidewalk Cleaning",
-  "Concrete Cleaning",
+  "Exterior Cleaning",
+  "Pressure Washing",
+  "Minor Repairs",
+  "Move-Out Repairs",
+  "Turnover Services",
+  "Property Maintenance",
   "Equipment Cleaning",
-  "Commercial Washing",
   "South Georgia Service",
 ];
 
 export const services = [
   {
-    title: "Soft Washing",
-    text: "A lower-pressure cleaning option for siding, trim, storefronts, and exterior surfaces that need a careful clean.",
+    title: "Exterior Cleaning & Restoration",
+    text: "Pressure washing, soft washing, house washing, storefront cleaning, sidewalks, concrete, common areas, and exterior surfaces that need cleaned up.",
   },
   {
-    title: "House Washing",
-    text: "Exterior house washing for siding, porches, entry areas, and the areas people notice first.",
+    title: "Minor Repairs & Maintenance",
+    text: "Small repair jobs like minor wood repairs, handrail repairs, fence and gate repairs, deck board replacement, caulking, and general exterior upkeep.",
   },
   {
-    title: "Spiderweb Removal",
-    text: "Removal of spiderwebs, buildup, and hard-to-reach mess around homes, storefronts, porches, and exterior surfaces.",
+    title: "Move-Out & Turnover Services",
+    text: "Cleaning and repair help for move-outs, rentals, turnovers, managed properties, and spaces that need to be ready for the next tenant or guest.",
   },
   {
-    title: "Sidewalk & Concrete Cleaning",
-    text: "Surface cleaning for sidewalks, walkways, driveways, pads, and high-traffic concrete areas.",
+    title: "Property Management Support",
+    text: "Ongoing property maintenance for homeowners, landlords, property managers, rentals, commercial properties, and multi-property needs.",
   },
   {
-    title: "Equipment Cleaning",
-    text: "Cleaning for logging equipment, construction equipment, heavy machinery, trailers, and other work equipment.",
+    title: "Exterior Maintenance Services",
+    text: "Gutter cleaning, mailbox installation, house numbers, shutter replacement, exterior light fixture replacement, and other small exterior jobs.",
   },
   {
-    title: "Commercial Washing",
-    text: "Exterior cleaning for local businesses, shops, gas stations, offices, storefronts, sidewalks, and commercial properties.",
+    title: "Commercial & Common Areas",
+    text: "Cleaning and maintenance for storefronts, business entrances, sidewalks, trash enclosures, signs, shared spaces, and customer-facing exterior areas.",
   },
 ];
 
@@ -86,6 +86,11 @@ export const beforeAfter = [
 ];
 
 export const faqs = [
+  {
+  question: "What services do you offer?",
+  answer:
+    "Services include exterior cleaning, pressure washing, soft washing, house washing, spiderweb removal, sidewalk and concrete cleaning, equipment cleaning, minor repairs, move-out repairs, turnover services, and ongoing property maintenance.",
+},
   {
     question: "Do you offer free estimates?",
     answer:
@@ -121,6 +126,11 @@ export const faqs = [
     answer:
       "Yes. Sending photos of the area that needs cleaned is one of the easiest ways to get the quote process started.",
   },
+  {
+  question: "Do you work with landlords or property managers?",
+  answer:
+    "Yes. TrueClean Solutions can help homeowners, landlords, property managers, rentals, and commercial properties with cleaning, minor repairs, move-out work, turnover services, and ongoing maintenance needs.",
+},
 ];
 export const galleryItems = [
   {
