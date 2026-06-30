@@ -63,13 +63,12 @@ export const beforeAfter = [
     before: "/images/trueclean-before1.jpg",
     after: "/images/trueclean-after1.jpg",
   },
-    {
+  {
     title: "Equipment Cleaning",
     text: "Heavy equipment areas cleaned to remove grime, buildup, and jobsite mess from hard-working machinery.",
     before: "/images/equipment-dirty-pump.jpg",
     after: "/images/equipment-clean-pump2.jpg",
   },
-
   {
     title: "Spiderweb Removal",
     text: "Spiderwebs and exterior buildup removed from the home for a cleaner, brighter look.",
@@ -82,7 +81,30 @@ export const beforeAfter = [
     before: "/images/trueclean-before2.jpg",
     after: "/images/trueclean-after2.jpg",
   },
-
+  {
+    title: "Porch Ceiling Cleaning",
+    text: "Porch ceiling and covered exterior areas cleaned to remove buildup and brighten the entry space.",
+    before: "/images/house-before-1.jpeg",
+    after: "/images/house-after-1.jpeg",
+  },
+  {
+    title: "Exterior Porch Cleaning",
+    text: "Covered porch areas cleaned for a fresher, better-kept look around the home.",
+    before: "/images/house-before-2.jpeg",
+    after: "/images/house-after-2.jpeg",
+  },
+  {
+    title: "Front Porch Washing",
+    text: "Front porch and entry surfaces cleaned to help the home look brighter and better maintained.",
+    before: "/images/house-before-3.jpeg",
+    after: "/images/house-after-3.jpeg",
+  },
+  {
+    title: "House Exterior Cleaning",
+    text: "Exterior siding, trim, and entry areas cleaned to remove buildup and improve curb appeal.",
+    before: "/images/house-before-4.jpeg",
+    after: "/images/house-after-4.jpeg",
+  },
 ];
 
 export const faqs = [
