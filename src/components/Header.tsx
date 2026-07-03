@@ -42,7 +42,7 @@ export default function Header() {
           <a href={site.phoneHref} className="header-phone">
             {site.phone}
           </a>
-          <Link href="#quote" className="header-quote">
+          <Link href="/#quote" className="header-quote">
             Request Quote
           </Link>
         </div>

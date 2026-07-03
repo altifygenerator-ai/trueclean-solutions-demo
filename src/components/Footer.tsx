@@ -35,11 +35,11 @@ export default function Footer() {
 
         <div className="footer-col">
           <h3>Services</h3>
-          <a href="#services">Soft Washing</a>
-          <a href="#services">House Washing</a>
-          <a href="#services">Spiderweb Removal</a>
-          <a href="#services">Concrete & Walkways</a>
-          <a href="#services">Commercial Cleaning</a>
+          <Link href="/#services">Soft Washing</Link>
+          <Link href="/#services">House Washing</Link>
+          <Link href="/#services">Spiderweb Removal</Link>
+          <Link href="/#services">Concrete & Walkways</Link>
+          <Link href="/#services">Commercial Cleaning</Link>
         </div>
 
         <div className="footer-col">
@@ -61,7 +61,7 @@ export default function Footer() {
           <p className="site-credit">
             Website by{" "}
             <a
-              href="https://hometownwebservicesar.com"
+              href="https://www.hometownwebservicesar.com"
               target="_blank"
               rel="noreferrer"
             >

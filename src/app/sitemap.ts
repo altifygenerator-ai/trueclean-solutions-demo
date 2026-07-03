@@ -1,24 +1,21 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = "https://truecleansolutionsga.com";
+import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date();
+  const lastModified = new Date();
 
-  const routes = [
+  return [
     {
       url: siteUrl,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${siteUrl}/gallery`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
   ];
-
-  return routes;
 }

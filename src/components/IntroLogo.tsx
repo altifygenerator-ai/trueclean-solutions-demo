@@ -1,19 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function IntroLogo() {
-  const [showIntro, setShowIntro] = useState(false);
-
-  useEffect(() => {
-    // FOR TESTING: always show it
-    setShowIntro(true);
-
-    // Later, replace the line above with this:
-    // const alreadyPlayed = sessionStorage.getItem("trueclean-intro-played");
-    // if (!alreadyPlayed) setShowIntro(true);
-  }, []);
+  const [showIntro, setShowIntro] = useState(true);
 
   function handleAnimationEnd() {
     sessionStorage.setItem("trueclean-intro-played", "true");

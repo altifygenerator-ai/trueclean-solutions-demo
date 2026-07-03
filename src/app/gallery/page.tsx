@@ -3,11 +3,38 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { site } from "@/data/site";
+import type { Metadata } from "next";
+import { siteUrl } from "@/lib/site";
 
-export const metadata = {
-  title: "Work Gallery | TrueClean Solutions",
+export const metadata: Metadata = {
+  title: "Work Gallery",
   description:
     "View exterior cleaning work from TrueClean Solutions, including equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing in South Georgia.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    title: "Work Gallery | TrueClean Solutions",
+    description:
+      "See exterior cleaning, equipment cleaning, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing work from TrueClean Solutions in South Georgia.",
+    url: `${siteUrl}/gallery`,
+    type: "website",
+    images: [
+      {
+        url: "/images/trueclean-og.png",
+        width: 1200,
+        height: 630,
+        alt: "TrueClean Solutions exterior cleaning gallery in South Georgia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work Gallery | TrueClean Solutions",
+    description:
+      "Exterior cleaning, equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, and house washing work in South Georgia.",
+    images: ["/images/trueclean-og.png"],
+  },
 };
 
 const videos = [
@@ -15,13 +42,13 @@ const videos = [
     title: "Equipment Cleaning Video",
     category: "Equipment",
     src: "/videos/equipment-cleaning-1.mp4",
-    poster: "/images/video-thumb-equipment.jpg",
+    poster: "/images/shovel-1.png",
   },
 {
     title: "Residential Pressure washing",
     category: "Residential",
     src: "/videos/residential-pressure-washing.mp4",
-    poster: "/images/video-thumb-residential.jpg",
+    poster: "/images/trueclean-before2.jpg",
 }
 ];
 const images = [
@@ -105,9 +132,48 @@ const images = [
   },
 ];
 
+const galleryStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${siteUrl}/gallery#webpage`,
+    url: `${siteUrl}/gallery`,
+    name: "Work Gallery | TrueClean Solutions",
+    description:
+      "Photos and videos from exterior cleaning, equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing work across South Georgia.",
+    isPartOf: {
+      "@id": `${siteUrl}/#website`,
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Work Gallery",
+        item: `${siteUrl}/gallery`,
+      },
+    ],
+  },
+];
+
 export default function GalleryPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(galleryStructuredData),
+        }}
+      />
       <Header />
 
       <section className="gallery-page-hero water-bg water-bg-center">

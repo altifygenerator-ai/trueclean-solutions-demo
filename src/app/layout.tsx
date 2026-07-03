@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { siteName, siteUrl } from "@/lib/site";
 
 import "./globals.css";
 
@@ -16,12 +17,11 @@ const oswald = Oswald({
   display: "swap",
 });
 
-const siteUrl = "https://truecleansolutionsga.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  applicationName: "TrueClean Solutions",
+  applicationName: siteName,
   referrer: "origin-when-cross-origin",
 
   title: {
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     "South Georgia exterior cleaning",
   ],
 
-  authors: [{ name: "TrueClean Solutions" }],
-  creator: "TrueClean Solutions",
-  publisher: "TrueClean Solutions",
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
 
   verification: {
     google: "fYxdXJEy7PHpObyf25rm3wcY5xgB4h2N-rMbhSO1foo",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     description:
       "Soft washing, house washing, spiderweb removal, sidewalk and concrete cleaning, equipment cleaning, storefront cleaning, commercial washing, and exterior cleaning for homes and businesses across South Georgia.",
     url: siteUrl,
-    siteName: "TrueClean Solutions",
+    siteName,
     type: "website",
     locale: "en_US",
     images: [
@@ -107,6 +107,12 @@ export const metadata: Metadata = {
   },
 
   category: "Exterior Cleaning",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 
   formatDetection: {
     email: false,
