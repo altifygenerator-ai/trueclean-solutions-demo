@@ -4,19 +4,31 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { site } from "@/data/site";
 import type { Metadata } from "next";
-import { siteUrl } from "@/lib/site";
+import { siteName, siteUrl } from "@/lib/site";
+
+const galleryTitle = "Exterior Cleaning Work Gallery in Lyons & South Georgia";
+const galleryDescription =
+  "View exterior cleaning work from TrueClean Solutions, including equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing in Lyons, Vidalia, Toombs County, and South Georgia.";
 
 export const metadata: Metadata = {
-  title: "Work Gallery",
-  description:
-    "View exterior cleaning work from TrueClean Solutions, including equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing in South Georgia.",
+  title: galleryTitle,
+  description: galleryDescription,
+  keywords: [
+    "TrueClean Solutions gallery",
+    "exterior cleaning gallery Lyons GA",
+    "pressure washing photos Lyons GA",
+    "commercial washing photos Vidalia GA",
+    "equipment cleaning photos South Georgia",
+    "spiderweb removal Lyons GA",
+    "concrete cleaning before and after Lyons GA",
+    "sidewalk cleaning South Georgia",
+  ],
   alternates: {
     canonical: "/gallery",
   },
   openGraph: {
-    title: "Work Gallery | TrueClean Solutions",
-    description:
-      "See exterior cleaning, equipment cleaning, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing work from TrueClean Solutions in South Georgia.",
+    title: `${galleryTitle} | ${siteName}`,
+    description: galleryDescription,
     url: `${siteUrl}/gallery`,
     type: "website",
     images: [
@@ -30,9 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Work Gallery | TrueClean Solutions",
-    description:
-      "Exterior cleaning, equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, and house washing work in South Georgia.",
+    title: `${galleryTitle} | ${siteName}`,
+    description: galleryDescription,
     images: ["/images/trueclean-og.png"],
   },
 };
@@ -44,13 +55,14 @@ const videos = [
     src: "/videos/equipment-cleaning-1.mp4",
     poster: "/images/shovel-1.png",
   },
-{
+  {
     title: "Residential Pressure washing",
     category: "Residential",
     src: "/videos/residential-pressure-washing.mp4",
     poster: "/images/trueclean-before2.jpg",
-}
+  },
 ];
+
 const images = [
   {
     title: "Equipment Cleaning",
@@ -132,38 +144,87 @@ const images = [
   },
 ];
 
-const galleryStructuredData = [
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${siteUrl}/gallery#webpage`,
-    url: `${siteUrl}/gallery`,
-    name: "Work Gallery | TrueClean Solutions",
-    description:
-      "Photos and videos from exterior cleaning, equipment cleaning, commercial washing, spiderweb removal, concrete cleaning, sidewalk cleaning, and house washing work across South Georgia.",
-    isPartOf: {
-      "@id": `${siteUrl}/#website`,
+const galleryStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/gallery#webpage`,
+      url: `${siteUrl}/gallery`,
+      name: galleryTitle,
+      description: galleryDescription,
+      inLanguage: "en-US",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`,
+      },
+      about: {
+        "@id": `${siteUrl}/#business`,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/trueclean-og.png`,
+      },
     },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteUrl,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Work Gallery",
-        item: `${siteUrl}/gallery`,
-      },
-    ],
-  },
-];
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/gallery#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: siteUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Work Gallery",
+          item: `${siteUrl}/gallery`,
+        },
+      ],
+    },
+    {
+      "@type": "ImageGallery",
+      "@id": `${siteUrl}/gallery#image-gallery`,
+      name: "TrueClean Solutions Work Photos",
+      image: images.map((image) => ({
+        "@type": "ImageObject",
+        name: image.title,
+        caption: image.alt,
+        contentUrl: `${siteUrl}${image.src}`,
+        representativeOfPage: false,
+      })),
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/gallery#media-list`,
+      name: "TrueClean Solutions Gallery Media",
+      itemListElement: [
+        ...images.map((image, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "ImageObject",
+            name: image.title,
+            caption: image.alt,
+            contentUrl: `${siteUrl}${image.src}`,
+          },
+        })),
+        ...videos.map((video, index) => ({
+          "@type": "ListItem",
+          position: images.length + index + 1,
+          item: {
+            "@type": "VideoObject",
+            name: video.title,
+            description: `${video.title} by TrueClean Solutions in South Georgia.`,
+            thumbnailUrl: `${siteUrl}${video.poster}`,
+            contentUrl: `${siteUrl}${video.src}`,
+          },
+        })),
+      ],
+    },
+  ],
+};
 
 export default function GalleryPage() {
   return (
