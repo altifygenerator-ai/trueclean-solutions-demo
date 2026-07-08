@@ -11,6 +11,7 @@ import Services from "@/components/Services";
 import { beforeAfter, faqs, services, site } from "@/data/site";
 import IntroLogo from "@/components/IntroLogo";
 import GalleryPreview from "@/components/GalleryPreview";
+import EquipmentFlyer from "@/components/EquipmentFlyer";
 import type { Metadata } from "next";
 import { siteName, sitePhone, sitePhoneHref, siteUrl } from "@/lib/site";
 
@@ -226,6 +227,7 @@ export default function Home() {
         <Hero />
         <Services />
       <BeforeAfter />
+        <EquipmentFlyer />
 <GalleryPreview />
 <ResidentialCommercial />
         <About />

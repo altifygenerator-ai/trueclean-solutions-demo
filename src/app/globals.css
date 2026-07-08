@@ -1285,6 +1285,143 @@ main {
   color: rgba(238, 243, 248, 0.72);
   line-height: 1.65;
 }
+
+/* EQUIPMENT FLYER */
+
+.equipment-flyer-section {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0, 86, 199, 0.18), transparent 30rem),
+    radial-gradient(circle at 92% 70%, rgba(0, 50, 150, 0.12), transparent 26rem),
+    linear-gradient(180deg, #020406 0%, #000102 100%);
+  color: white;
+}
+
+.equipment-flyer-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.72fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid rgba(47, 104, 201, 0.34);
+  border-radius: calc(var(--radius) + 10px);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(0, 50, 150, 0.13),
+      rgba(0, 0, 0, 0.8)
+    ),
+    #020406;
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, 0.56),
+    0 0 38px rgba(0, 50, 150, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.equipment-flyer-card::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: calc(var(--radius) + 2px);
+}
+
+.equipment-flyer-copy {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.2rem, 3vw, 3rem);
+}
+
+.equipment-flyer-copy h2 {
+  max-width: 760px;
+  margin: 0;
+  font-family: var(--font-heading), Arial, sans-serif;
+  font-size: clamp(3rem, 6vw, 6.1rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  color: transparent;
+  background: var(--chrome-hard);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(0 2px 0 rgba(0, 0, 0, 0.58))
+    drop-shadow(0 0 14px rgba(0, 50, 150, 0.24));
+}
+
+.equipment-flyer-copy p:not(.section-kicker) {
+  max-width: 650px;
+  margin: 1.15rem 0 0;
+  color: rgba(238, 243, 248, 0.76);
+  font-size: 1.06rem;
+  line-height: 1.72;
+}
+
+.equipment-flyer-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.55rem;
+}
+
+.equipment-flyer-points span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.7rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(47, 104, 201, 0.38);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 50, 150, 0.16)),
+    rgba(0, 0, 0, 0.32);
+  color: rgba(238, 243, 248, 0.92);
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.equipment-flyer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.equipment-flyer-image-wrap {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid rgba(47, 104, 201, 0.42);
+  border-radius: calc(var(--radius) + 2px);
+  background: #000102;
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.58),
+    0 0 42px rgba(0, 50, 150, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.equipment-flyer-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.11), transparent 24%),
+    linear-gradient(180deg, transparent 72%, rgba(0, 0, 0, 0.18));
+}
+
+.equipment-flyer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* GALLERY PREVIEW */
 
 .gallery-preview-section {
@@ -2610,3 +2747,42 @@ main {
     flex-direction: column;
   }
 }
+
+@media (max-width: 980px) {
+  .equipment-flyer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-flyer-image-wrap {
+    max-width: 760px;
+    margin: 0 auto 0.35rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .equipment-flyer-card {
+    border-radius: var(--radius);
+  }
+
+  .equipment-flyer-card::before {
+    inset: 0.65rem;
+  }
+
+  .equipment-flyer-copy {
+    padding: 1.25rem 1rem 0.35rem;
+  }
+
+  .equipment-flyer-copy h2 {
+    font-size: clamp(2.7rem, 14vw, 4.5rem);
+  }
+
+  .equipment-flyer-points span {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .equipment-flyer-actions .btn {
+    width: 100%;
+  }
+}
+
