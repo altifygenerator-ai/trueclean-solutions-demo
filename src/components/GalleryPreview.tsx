@@ -1,51 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { galleryItems } from "@/data/site";
 
-const previewItems = [
-  {
-    type: "image",
-    title: "Equipment Cleaning",
-    category: "Equipment",
-    src: "/images/shovel-2.png",
-    alt: "Excavator equipment cleaning by TrueClean Solutions",
-  },
-  {
-    type: "image",
-    title: "Engine Bay Cleaning",
-    category: "Equipment",
-    src: "/images/shovel-engine.jpeg",
-    alt: "Clean heavy equipment engine bay",
-  },
-  {
-    type: "video",
-    title: "Equipment Cleaning Video",
-    category: "Video",
-    src: "/videos/equipment-cleaning-1.mp4",
-    poster: "/images/shovel-1.png",
-    alt: "Equipment cleaning video by TrueClean Solutions",
-  },
-  {
-    type: "image",
-    title: "Pump Area Cleaning",
-    category: "Equipment",
-    src: "/images/shovel-pump.jpeg",
-    alt: "Heavy equipment pump area cleaned by TrueClean Solutions",
-  },
-  {
-    type: "image",
-    title: "Commercial Building Washing",
-    category: "Commercial",
-    src: "/images/trueclean-after1.jpg",
-    alt: "Commercial building after exterior cleaning",
-  },
-  {
-    type: "image",
-    title: "Sidewalk & Concrete Cleaning",
-    category: "Concrete",
-    src: "/images/trueclean-after2.jpg",
-    alt: "Sidewalk after concrete cleaning",
-  },
+const previewSources = [
+  "/images/residential-brick-home-after.jpeg",
+  "/images/residential-covered-patio-after.jpeg",
+  "/images/residential-brick-chimney-after.jpeg",
+  "/images/trueclean-after1.jpg",
+  "/images/trueclean-after2.jpg",
+  "/images/shovel-2.png",
 ];
+
+const previewItems = previewSources.flatMap((src) => {
+  const item = galleryItems.find((galleryItem) => galleryItem.src === src);
+  return item ? [item] : [];
+});
 
 export default function GalleryPreview() {
   return (
@@ -68,24 +37,13 @@ export default function GalleryPreview() {
           {previewItems.map((item) => (
             <article key={item.src} className="gallery-preview-card">
               <div className="gallery-media-wrap">
-                {item.type === "video" ? (
-                  <video
-                    src={item.src}
-                    poster={item.poster}
-                    muted
-                    loop
-                    playsInline
-                    controls
-                    className="gallery-video"
-                  />
-                ) : (
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="gallery-image"
-                  />
-                )}
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 720px) 100vw, (max-width: 980px) 50vw, 33vw"
+                  className="gallery-image"
+                />
 
                 <span>{item.category}</span>
               </div>
