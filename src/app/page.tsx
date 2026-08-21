@@ -13,20 +13,20 @@ import IntroLogo from "@/components/IntroLogo";
 import GalleryPreview from "@/components/GalleryPreview";
 import EquipmentFlyer from "@/components/EquipmentFlyer";
 import type { Metadata } from "next";
-import { siteName, sitePhone, sitePhoneHref, siteUrl } from "@/lib/site";
+import { sitePhone, sitePhoneHref, siteUrl } from "@/lib/site";
 
-const homeTitle = "Exterior Cleaning, Pressure Washing & Property Care in Lyons, GA";
+const homeTitle = "Pressure Washing & Property Care in Lyons, GA | TrueClean";
 const homeDescription =
-  "TrueClean Solutions provides exterior cleaning, pressure washing, soft washing, equipment cleaning, minor repairs, turnover help, and property maintenance in Lyons, Vidalia, Toombs County, and South Georgia.";
+  "TrueClean Solutions provides pressure washing, exterior cleaning, equipment cleaning, minor repairs and property care in Lyons, Vidalia and Toombs County, GA.";
 
 export const metadata: Metadata = {
-  title: homeTitle,
+  title: { absolute: homeTitle },
   description: homeDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: `${homeTitle} | ${siteName}`,
+    title: homeTitle,
     description: homeDescription,
     url: siteUrl,
     type: "website",
@@ -35,13 +35,14 @@ export const metadata: Metadata = {
         url: "/images/trueclean-og.png",
         width: 1200,
         height: 630,
-        alt: "TrueClean Solutions exterior cleaning in Lyons, Georgia",
+        alt: "TrueClean Solutions pressure washing and property care in Lyons, Georgia",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${homeTitle} | ${siteName}`,
+    title: homeTitle,
     description: homeDescription,
     images: ["/images/trueclean-og.png"],
   },

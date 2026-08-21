@@ -4,30 +4,20 @@ import Footer from "@/components/Footer";
 import GalleryCollection from "@/components/GalleryCollection";
 import Header from "@/components/Header";
 import { galleryItems, site } from "@/data/site";
-import { siteName, siteUrl } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
 
-const galleryTitle = "Exterior Cleaning Work Gallery in Lyons & South Georgia";
+const galleryTitle = "Exterior Cleaning Gallery | Lyons, GA | TrueClean Solutions";
 const galleryDescription =
-  "View exterior cleaning work from TrueClean Solutions, including house washing, porch and deck cleaning, equipment cleaning, commercial washing, concrete cleaning, and before-and-after results in Lyons, Vidalia, Toombs County, and South Georgia.";
+  "See pressure washing, house washing, concrete, deck, commercial and equipment cleaning work by TrueClean Solutions across Lyons, Vidalia and South Georgia.";
 
 export const metadata: Metadata = {
-  title: galleryTitle,
+  title: { absolute: galleryTitle },
   description: galleryDescription,
-  keywords: [
-    "TrueClean Solutions gallery",
-    "exterior cleaning gallery Lyons GA",
-    "pressure washing photos Lyons GA",
-    "commercial washing photos Vidalia GA",
-    "equipment cleaning photos South Georgia",
-    "house washing before and after Lyons GA",
-    "deck cleaning South Georgia",
-    "concrete cleaning before and after Lyons GA",
-  ],
   alternates: {
     canonical: "/gallery",
   },
   openGraph: {
-    title: `${galleryTitle} | ${siteName}`,
+    title: galleryTitle,
     description: galleryDescription,
     url: `${siteUrl}/gallery`,
     type: "website",
@@ -36,13 +26,14 @@ export const metadata: Metadata = {
         url: "/images/trueclean-og.png",
         width: 1200,
         height: 630,
-        alt: "TrueClean Solutions exterior cleaning gallery in South Georgia",
+        alt: "TrueClean Solutions pressure washing and exterior cleaning gallery in South Georgia",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${galleryTitle} | ${siteName}`,
+    title: galleryTitle,
     description: galleryDescription,
     images: ["/images/trueclean-og.png"],
   },
